@@ -29,3 +29,14 @@ function encurtarUrl() {
             inputUrl.value = json.shortUrl; 
         });
 }
+
+function copiar() {
+    let inputUrl = document.getElementById("input-url");
+
+    inputUrl.select();
+    inputUrl.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(inputUrl.value);
+
+    alert(`URL copiada: ${inputUrl.value}`);
+}
